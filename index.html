@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Zodiac Checker</title>
+</head>
+
+<body>
+    <nav class="navi">
+        <ul>
+            <li><strong><a href="pages/about.html">ABOUT</a></strong></li>
+            <li><strong><a href="pages/infoZ.html">LOGIN</a></strong></li>
+            <li><strong><a href="index.html">ZODIAC CHECKER</a></strong></li>
+        </ul>
+    </nav>
+    <section id="box" class="box-purple">
+        <div id="border">
+            <h1>Zodiac Checker</h1>
+            <form id="data-form">
+                <label for="monthB">Month Of Birth: </label><br>
+                <input type="text" id="monthB" name="monthB" placeholder="Jan, Feb, Mar etc" required pattern="(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)"><br>
+
+                <label for="dateB">Date Of Birth: </label><br>
+                <input type="number" id="dateB" name="dateB" placeholder="1, 9, 28 etc" min="1" max="31" required><br>
+                <input type="submit" class="submit-btn" value="Submit">
+                <button class="info-show"><a href="#info-full">More Info</a></button>
+            </form>
+
+            <p id="result"></p>
+        </div>
+    </section>
+    <section id="info" class="info-ex">
+        <div id="text-area">
+            <p id="info-full">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus dui eget sodales pharetra. Nunc mollis, elit quis rutrum gravida, turpis nisi facilisis justo, in molestie orci lorem at tellus. Donec non massa dapibus, dictum nisi eget, pharetra
+                orci. Maecenas fermentum urna et blandit rhoncus. Pellentesque euismod lectus consectetur tempus imperdiet. Nulla lacinia urna non tortor vulputate congue. Proin sit amet tristique nisi. Duis ipsum eros, efficitur dictum pretium vel, eleifend
+                in ex. Maecenas sodales ligula enim, at condimentum odio semper ac. Donec lacinia arcu eget i nterdum maximus. Suspendisse laoreet ipsum eu ornare pharetra. Praesent lacinia quam vel odio tempor, non pulvinar diam elementum. Donec dictum
+                vel lectus ac ornare.
+            </p>
+            <p>Pellentesque bibendum dolor tortor, laoreet pellentesque augue vulputate sed. Suspendisse potenti. Donec tincidunt sapien eget sollicitudin ullamcorper. Cras diam nisl, fringilla in ipsum sed, auctor suscipit tortor. Praesent sodales vulputate
+                quam id ornare. Morbi eget quam tempor libero pulvinar facilisis. Donec et sapien eu leo porttitor scelerisque. Quisque et nunc purus. Etiam risus leo, pharetra vitae hendrerit ut, sodales suscipit libero. Vivamus tempor id sem ac ullamcorper.
+                In tincidunt quis ipsum eu interdum. Nunc tristique sem at nulla eleifend blandit. Vivamus risus nunc, ultrices vitae volutpat vel, efficitur in elit. Cras facilisis, tortor a consectetur suscipit, eros purus scelerisque nibh, ac euismod
+                urna sapien at neque. Vivamus eleifend mollis urna, in fringilla libero mollis quis. Donec tincidunt imperdiet nisi, vel tempor nisl ultrices eget. Duis in laoreet metus, vitae dictum turpis. Nam in volutpat orci. Sed convallis, lorem
+                id convallis sollicitudin, dui leo facilisis libero, a congue arcu mi at nunc. Fusce ac dictum velit. Etiam convallis massa nec nulla dictum dignissim. Mauris quis ex quis leo sagittis placerat. Maecenas sit amet massa sed magna auctor
+                facilisis eu quis dui. Sed sit amet risus rutrum, rhoncus ligula pellentesque, porta elit. Cras sapien leo, dictum consequat libero sit amet, porttitor cursus lacus. Vivamus vestibulum, quam eu sodales malesuada, turpis purus sagittis
+                enim, dictum tristique ex ipsum non velit. Phasellus scelerisque, tellus id elementum ultrices, elit ex vehicula urna, vel tristique lacus turpis eget sapien. Cras interdum volutpat felis at elementum. Proin sed pellentesque turpis, in
+                dictum est</p>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        var form = document.getElementById('data-form');
+        form.onsubmit = function(e) {
+            var month = form.monthB.value;
+            var day = form.dateB.value;
+            e.preventDefault();
+            var result = document.getElementById('result');
+            let astro_sign = "";
+
+            if (month == "Dec") {
+                if (day < 22)
+                    astro_sign = "Sagittarius";
+                else
+                    astro_sign = "Capricorn";
+            } else if (month == "Jan") {
+                if (day < 20)
+                    astro_sign = "Capricorn";
+                else
+                    astro_sign = "Aquarius";
+            } else if (month == "Feb") {
+                if (day < 19)
+                    astro_sign = "Aquarius";
+                else
+                    astro_sign = "Pisces";
+            } else if (month == "Mar") {
+                if (day < 21)
+                    astro_sign = "Pisces";
+                else
+                    astro_sign = "Aries";
+            } else if (month == "Apr") {
+                if (day < 20)
+                    astro_sign = "Aries";
+                else
+                    astro_sign = "Taurus";
+            } else if (month == "May") {
+                if (day < 21)
+                    astro_sign = "Taurus";
+                else
+                    astro_sign = "Gemini";
+            } else if (month == "Jun") {
+                if (day < 21)
+                    astro_sign = "Gemini";
+                else
+                    astro_sign = "Cancer";
+            } else if (month == "Jul") {
+                if (day < 23)
+                    astro_sign = "Cancer";
+                else
+                    astro_sign = "Leo";
+            } else if (month == "Aug") {
+                if (day < 23)
+                    astro_sign = "Leo";
+                else
+                    astro_sign = "Virgo";
+            } else if (month == "Sep") {
+                if (day < 23)
+                    astro_sign = "Virgo";
+                else
+                    astro_sign = "Libra";
+            } else if (month == "Oct") {
+                if (day < 23)
+                    astro_sign = "Libra";
+                else
+                    astro_sign = "Scorpio";
+            } else if (month == "Nov") {
+                if (day < 22)
+                    astro_sign = "Scorpio";
+                else
+                    astro_sign = "Sagittarius";
+            }
+
+            if (day == 1) {
+                day = day + 'st';
+            } else if (day == 2) {
+                day = day + 'nd';
+            } else if (day == 3) {
+                day = day + 'rd';
+            } else {
+                day = day + 'th';
+            }
+            result.innerHTML = 'Your date of birth is ' + month + ' ' + day + "<br>" + "therefore Your Zodiac sign is " + astro_sign;
+            form.reset();
+        }
+    </script>
+    <div class="footer">
+        <p align="center">Copyright &copy; 2022 Project Zodiac Checker.</p>
+    </div>
+</body>
+
+</html>
