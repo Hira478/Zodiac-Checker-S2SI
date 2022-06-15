@@ -40,14 +40,14 @@ nav ul li a.active {
     border-right: 3px solid rgb(255, 255, 255);
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 420px) {
     nav ul li.left,
     nav ul li {
         float: none;
     }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 420px) {
     nav ul li a {
         float: none;
         border-bottom: 1px solid rgb(122, 122, 122);
@@ -55,7 +55,7 @@ nav ul li a.active {
     }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 420px) {
     nav ul li:hover {
         float: none;
         background-color: #111;
@@ -64,7 +64,7 @@ nav ul li a.active {
     }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 420px) {
     nav ul li a.active {
         float: none;
         border-bottom: 3px solid rgb(255, 255, 255);

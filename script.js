@@ -1,4 +1,6 @@
 var form = document.getElementById('data-form');
+var infoEx = document.getElementById('info');
+infoEx.style.visibility = 'hidden';
 form.onsubmit = function(e) {
     e.preventDefault();
     var month = form.monthB.value;
@@ -7,6 +9,7 @@ form.onsubmit = function(e) {
     var full_text = document.getElementById('info-full');
     let astro_sign = "";
     let zInfo = "";
+    infoEx.style.visibility = 'visible';
 
     if (month == "Dec") {
         if (day < 22)
